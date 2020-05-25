@@ -34,10 +34,7 @@ export function shuffleDeck(deck: Deck): Deck {
   let t;
   let i;
   while (m) {
-    // pick remaining element
     i = Math.floor(Math.random() * m--);
-
-    // swap
     t = deck.cards[m];
     deck.cards[m] = deck.cards[i];
     deck.cards[i] = t;
@@ -45,9 +42,3 @@ export function shuffleDeck(deck: Deck): Deck {
 
   return deck;
 }
-
-const deck = buildDeck();
-
-console.dir(deck);
-console.log(deck.cards.length);
-console.dir(shuffleDeck(deck));
